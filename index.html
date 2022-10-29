@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="index.js"></script>
         <script src="fichasEtroco.js"></script>
+        <script src="jogoAdivinhação.js"></script>
+
         <title>CASSINAO</title>
     </head>
     <body>
@@ -20,5 +22,11 @@
             <input type="submit" value="OK" onclick="cadastro()" />
         </form>
         <h3 id="total-fichas">fichas:0</h3>
+        <input
+            type="number"
+            id="fichas"
+            placeholder="fichas para serem apostadas"
+        />
+        <input type="button" value="adivinhação" onclick="jogoAdivinhacao()" />
     </body>
 </html>
