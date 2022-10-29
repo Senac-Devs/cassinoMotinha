@@ -1,7 +1,7 @@
 let valor;
 let nome;
 let idade;
-let fichas;
+let fichas = 0;
 
 function cadastro() {
     nome = document.getElementById("nome").value;
@@ -18,5 +18,5 @@ function cadastro() {
     alert(idade + " " + valor);
     let troco;
     [fichas, troco] = compraFichas(valor);
-    document.getElementById("total-fichas").innerHTML="fichas:"+fichas
+    document.getElementById("total-fichas").innerHTML = "fichas:" + fichas;
 }
