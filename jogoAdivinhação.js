@@ -1,26 +1,28 @@
+let segredo;
+let tentativas = 0;
+
+function geraSegredo() {
+    return Math.floor(Math.random() * 10);
+}
+segredo = geraSegredo();
+
 function jogoAdivinhacao() {
-    let segredo = Math.floor(Math.random() * 10);
-    let jogoRodando = true;
-    let tentativas = 0;
+    if (tentativas == 5) {
+        alert("Você ultrapassou");
+        return false;
+    } else {
+        tentativas++;
 
-    while (jogoRodando) {
-        if (tentativas == 5) {
-            console.log("Você ultrapassou");
-            return false;
+        let palpite = prompt("Insira o palpite");
+        palpite = parseInt(palpite);
+
+        if (palpite == segredo) {
+           alert("Parabéns!");
+            return true;
+        } else if (palpite > segredo) {
+           alert("Menos!");
         } else {
-            tentativas++;
-
-            let palpite = prompt("Insira o palpite");
-            palpite = parseInt(palpite);
-
-            if (palpite == segredo) {
-                console.log("Parabéns!");
-                return true;
-            } else if (palpite > segredo) {
-                console.log("Menos!");
-            } else {
-                console.log("Mais!");
-            }
+           alert("Mais!");
         }
     }
 }
