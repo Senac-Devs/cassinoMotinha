@@ -3,12 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="cadastrousuario.js"></script>
+        <script src="index.js"></script>
+        <script src="fichasEtroco.js"></script>
         <title>CASSINAO</title>
     </head>
     <body>
         <h1>cassino do motinha</h1>
-        <form>
+        <form onsubmit="return false">
             <input type="text" id="nome" placeholder="insira seu nome" />
             <input type="number" id="idade" placeholder="insira sua idade" />
             <input
@@ -18,5 +19,6 @@
             />
             <input type="submit" value="OK" onclick="cadastro()" />
         </form>
+        <h3 id="total-fichas">fichas:0</h3>
     </body>
 </html>
